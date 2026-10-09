@@ -6,5 +6,13 @@ import androidx.activity.compose.setContent
 import com.example.tugaspertemuan4.ui.theme.TugasPertemuan4Theme
 
 class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
+        setContent {
+            TugasPertemuan4Theme {
+                TugasLayout()
+            }
+        }
+    }
 }
