@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="screen_padding_horizontal">14dp</dimen>
+    <dimen name="header_padding_top">52dp</dimen>
+    <dimen name="header_text_spacing">4dp</dimen>
+    <dimen name="header_padding_bottom">24dp</dimen>
+
+    <dimen name="card_spacing">12dp</dimen>
+    <dimen name="card_min_height">96dp</dimen>
+    <dimen name="card_corner_radius">12dp</dimen>
+    <dimen name="card_padding">12dp</dimen>
+    <dimen name="card_content_spacing">12dp</dimen>
+    <dimen name="card_text_spacing">3dp</dimen>
+    <dimen name="logo_size">64dp</dimen>
+
+    <dimen name="footer_padding">8dp</dimen>
+
+    <dimen name="text_prodi_size">26sp</dimen>
+    <dimen name="text_univ_size">14sp</dimen>
+    <dimen name="text_nama_size">20sp</dimen>
+    <dimen name="text_detail_size">13sp</dimen>
+    <dimen name="text_footer_size">12sp</dimen>
+</resources>
