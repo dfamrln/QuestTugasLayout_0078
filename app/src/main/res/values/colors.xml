@@ -10,4 +10,9 @@
 
     <color name="layout_background">#FAF7FF</color>
     <color name="layout_text">#202124</color>
+
+    <color name="card_bambang">#575454</color>
+    <color name="card_gibran">#713DCA</color>
+    <color name="card_zhilal">#1600FF</color>
+    <color name="card_ahmad">#006400</color>
 </resources>
