@@ -79,3 +79,45 @@ private val daftarIdentitas = listOf(
     )
 )
 
+@Composable
+fun TugasLayout(modifier: Modifier = Modifier) {
+    Scaffold(
+        modifier = modifier.fillMaxSize(),
+        containerColor = colorResource(R.color.layout_background),
+        bottomBar = {
+            Text(
+                text = stringResource(R.string.copyright),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(dimensionResource(R.dimen.footer_padding)),
+                color = colorResource(R.color.layout_text),
+                fontSize = dimensionResource(R.dimen.text_footer_size).value.sp,
+                textAlign = TextAlign.Center
+            )
+        }
+    ) { innerPadding ->
+        LazyColumn(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
+                .padding(
+                    horizontal = dimensionResource(
+                        R.dimen.screen_padding_horizontal
+                    )
+                ),
+            verticalArrangement = Arrangement.spacedBy(
+                dimensionResource(R.dimen.card_spacing)
+            ),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            item {
+                HeaderIdentitas()
+            }
+
+            items(daftarIdentitas) { identitas ->
+                KartuIdentitas(data = identitas)
+            }
+        }
+    }
+}
+
