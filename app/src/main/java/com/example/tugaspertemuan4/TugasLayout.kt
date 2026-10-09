@@ -121,3 +121,122 @@ fun TugasLayout(modifier: Modifier = Modifier) {
     }
 }
 
+@Composable
+private fun HeaderIdentitas() {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(
+                top = dimensionResource(R.dimen.header_padding_top),
+                bottom = dimensionResource(R.dimen.header_padding_bottom)
+            ),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(
+            dimensionResource(R.dimen.header_text_spacing)
+        )
+    ) {
+        Text(
+            text = stringResource(R.string.prodi),
+            fontSize = dimensionResource(R.dimen.text_prodi_size).value.sp,
+            fontWeight = FontWeight.Bold,
+            color = colorResource(R.color.layout_text),
+            textAlign = TextAlign.Center
+        )
+
+        Text(
+            text = stringResource(R.string.univ),
+            fontSize = dimensionResource(R.dimen.text_univ_size).value.sp,
+            fontWeight = FontWeight.Bold,
+            color = colorResource(R.color.layout_text),
+            textAlign = TextAlign.Center
+        )
+    }
+}
+
+// Satu fungsi ini digunakan oleh seluruh kartu.
+@Composable
+fun KartuIdentitas(
+    data: DataIdentitas,
+    modifier: Modifier = Modifier
+) {
+    Card(
+        modifier = modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(
+            dimensionResource(R.dimen.card_corner_radius)
+        ),
+        colors = CardDefaults.cardColors(
+            containerColor = colorResource(data.warnaKartu)
+        )
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .heightIn(
+                    min = dimensionResource(R.dimen.card_min_height)
+                )
+                .padding(dimensionResource(R.dimen.card_padding)),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(
+                dimensionResource(R.dimen.card_content_spacing)
+            )
+        ) {
+            LogoIdentitas(gambar = data.gambar)
+
+            Column(
+                modifier = Modifier.weight(1f),
+                verticalArrangement = Arrangement.spacedBy(
+                    dimensionResource(R.dimen.card_text_spacing)
+                )
+            ) {
+                Text(
+                    text = stringResource(data.nama),
+                    fontSize = dimensionResource(
+                        R.dimen.text_nama_size
+                    ).value.sp,
+                    fontFamily = data.fontNama,
+                    fontWeight = data.ketebalanNama,
+                    color = colorResource(R.color.text_nama)
+                )
+
+                data.telepon?.let { telepon ->
+                    Text(
+                        text = stringResource(telepon),
+                        fontSize = dimensionResource(
+                            R.dimen.text_detail_size
+                        ).value.sp,
+                        color = colorResource(R.color.text_telepon)
+                    )
+                }
+
+                Text(
+                    text = stringResource(data.alamat),
+                    fontSize = dimensionResource(
+                        R.dimen.text_detail_size
+                    ).value.sp,
+                    color = colorResource(data.warnaAlamat)
+                )
+            }
+
+            LogoIdentitas(gambar = data.gambar)
+        }
+    }
+}
+
+@Composable
+private fun LogoIdentitas(@DrawableRes gambar: Int) {
+    Image(
+        painter = painterResource(gambar),
+        contentDescription = stringResource(R.string.deskripsi_logo),
+        modifier = Modifier.size(
+            dimensionResource(R.dimen.logo_size)
+        )
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun TugasLayoutPreview() {
+    TugasPertemuan4Theme {
+        TugasLayout()
+    }
+}
