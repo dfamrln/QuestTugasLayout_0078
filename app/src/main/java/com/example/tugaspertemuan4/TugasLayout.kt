@@ -43,3 +43,39 @@ data class DataIdentitas(
     val ketebalanNama: FontWeight = FontWeight.Bold
 )
 
+private val daftarIdentitas = listOf(
+    DataIdentitas(
+        nama = R.string.nama_bambang,
+        alamat = R.string.alamat_bambang,
+        warnaKartu = R.color.card_bambang,
+        warnaAlamat = R.color.text_alamat_kuning,
+        gambar = R.drawable.umy_logo,
+        fontNama = FontFamily.Cursive,
+        ketebalanNama = FontWeight.Normal
+    ),
+    DataIdentitas(
+        nama = R.string.nama_gibran,
+        alamat = R.string.alamat_gibran,
+        warnaKartu = R.color.card_gibran,
+        warnaAlamat = R.color.text_alamat_kuning,
+        gambar = R.drawable.umy_logo,
+        telepon = R.string.nomor_telepon
+    ),
+    DataIdentitas(
+        nama = R.string.nama_zhilal,
+        alamat = R.string.alamat_zhilal,
+        warnaKartu = R.color.card_zhilal,
+        warnaAlamat = R.color.text_alamat_putih,
+        gambar = R.drawable.umy_logo,
+        telepon = R.string.nomor_telepon
+    ),
+    DataIdentitas(
+        nama = R.string.nama_ahmad,
+        alamat = R.string.alamat_ahmad,
+        warnaKartu = R.color.card_ahmad,
+        warnaAlamat = R.color.text_alamat_putih,
+        gambar = R.drawable.umy_logo,
+        telepon = R.string.nomor_telepon
+    )
+)
+
