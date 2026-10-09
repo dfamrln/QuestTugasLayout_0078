@@ -32,3 +32,14 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import com.example.tugaspertemuan4.ui.theme.TugasPertemuan4Theme
+data class DataIdentitas(
+    @StringRes val nama: Int,
+    @StringRes val alamat: Int,
+    @ColorRes val warnaKartu: Int,
+    @ColorRes val warnaAlamat: Int,
+    @DrawableRes val gambar: Int,
+    @StringRes val telepon: Int? = null,
+    val fontNama: FontFamily = FontFamily.Default,
+    val ketebalanNama: FontWeight = FontWeight.Bold
+)
+
