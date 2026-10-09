@@ -15,4 +15,9 @@
     <color name="card_gibran">#713DCA</color>
     <color name="card_zhilal">#1600FF</color>
     <color name="card_ahmad">#006400</color>
+
+    <color name="text_nama">#FFFFFF</color>
+    <color name="text_telepon">#00FFFF</color>
+    <color name="text_alamat_kuning">#FFFF00</color>
+    <color name="text_alamat_putih">#FFFFFF</color>
 </resources>
